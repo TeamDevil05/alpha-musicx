@@ -11,9 +11,11 @@ from ShrutixMusic.misc import sudo
 from ShrutixMusic.plugins import ALL_MODULES
 from ShrutixMusic.utils.database import get_banned_users, get_gbanned
 from config import BANNED_USERS
-
+from ShrutixMusic.keep_alive import keep_alive
 
 async def init():
+    async def init():
+        keep_alive()
     if (
         not config.STRING1
         and not config.STRING2
